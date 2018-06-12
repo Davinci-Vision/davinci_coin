@@ -1,5 +1,5 @@
- #  Introduce Davinci 
-                                                        
+#  Introduce Davinci 
+![Alt text](http://uml.kr/images/davinci_bg.png "The davinci")                                
                                                           About Davinci
 
 Since 1996, the Korean wave known as ‘hallyu’ has become one of the largest contents in China, and this content has achieved great success in overseas markets. However, as a result of the North Korean nuclear issue in 2016, the United States’ Terminal High Altitude Area Defense (THAAD) missile defense system was installed in South Korea. Due to the THAAD system, tensions between South Korea and China rose, which has adversely affected the Korean wave.
