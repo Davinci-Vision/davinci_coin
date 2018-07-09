@@ -175,6 +175,6 @@ DaVinci Platform's Artificial Intelligence Engine (DAI) aims to use Unsupervised
 Da Vinci AI recognizes dangerous patterns in the block chain. This can be likened to the way an unmanned car sees an obstacle and builds a car. For example, the artificial intelligence can automatically select and process the algorithm when it recognizes the importance of the payment by itself. It is to recognize and manage the processing of $ 1 and the processing of $ 100,000 differently.
 <p align="center">
   <br />
-  <img src="http://uml.kr/images/davinci_05.jpg" width="80%" style="width=80%;min-width:300px;">
+  <img src="http://uml.kr/images/davinci_05_v01.png" width="80%" style="width=80%;min-width:300px;">
   <br /><br />
 </p>
