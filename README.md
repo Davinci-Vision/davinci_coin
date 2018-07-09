@@ -1,39 +1,52 @@
 #  3rd Generation A.I Block Chain DaVinciWhite Paper (0.5) 
 ![Alt text](http://uml.kr/images/davinci_bg.png "The davinci")
 
+<p align="center">
+  <br /><br /><br /><br />
+  <h3>Paul koh(cto@davinci.vision)</h3>
+  <h3>Davinci Partners Inc.</h3>
+  <h3>July 09.2018</h3>
+  <br />
+  <h5>(version 0.5)</h5>
+  <br /><br />
+  <br />
+</p>
+
+
+
 #### 3rd Generation A.I Block Chain DaVinciWhite Paper (0.5)
 ###### July.2018
 
 This report is aimed at building a mainnet. The main net means building a new platform out of the existing block-chain platform. The main net can attract companies that use various tokens. The main net will issue a coin directly to act as a kind of base currency.
 
-Da Vinci is a third-generation coin that builds a new mainnet.How do you share your generation?First generation block chain is a bit coin.The second generation is etherium.Etherium has implemented smart contracts and is capable of distributed applications (Dapp).
+Da Vinci is a third-generation coin that builds a new mainnet. How do you share your generation?First generation block chain is a bit coin. The second generation is etherium. Etherium has implemented smart contracts and is capable of distributed applications (Dapp).
 
-Da Vinci is a third-generation block chain. What does third generation mean?At present, many cryptocurrenciesare based on the second generation platform, Etherium. These etherium-based (ERC20) cryptocurrencies are called 'ERC20 tokens'. The problem with second-generation block chains is that second-generation technology makes it difficult for people to create real-life technologies and services. The definition of capacity and speed problems that can be handled by a block chain, and the method of mining (consensus algorithm) is unclear.The solution to this problem is the third generation block chain.
+Da Vinci is a third-generation block chain. What does third generation mean?At present, many cryptocurrenciesare based on the second generation platform, Etherium. These etherium-based (ERC20) cryptocurrencies are called 'ERC20 tokens'. The problem with second-generation block chains is that second-generation technology makes it difficult for people to create real-life technologies and services. The definition of capacity and speed problems that can be handled by a block chain, and the method of mining (consensus algorithm) is unclear. The solution to this problem is the third generation block chain.
 
 DaVinci, a third-generation block-chain, is capable of using a variety of DApp. In addition, it can speed up transaction processing and lower costs. As a result, the actual usable block chain is the third generation block chain.
 
-Third-generation block chains should increase transaction processing speed.Etherium has a slow processing speed and limited transaction (transaction record between users) capacity.For this reason, there is no business using etherium.
+Third-generation block chains should increase transaction processing speed. Etherium has a slow processing speed and limited transaction (transaction record between users) capacity. For this reason, there is no business using etherium.
 
-Let's look at the concept of velocity in a block chain.Etherium's trading per second (TPS) is 20 TPS. It processes 20 transactions per second. It is better than bit coin (4TPS) but it is not enough for business use.
+Let's look at the concept of velocity in a block chain. Etherium's trading per second (TPS) is 20 TPS. It processes 20 transactions per second. It is better than bit coin (4TPS) but it is not enough for business use.
 
-The block generation time has a great effect on the block chain speed. In a situation where there are not many transactions themselves, TPS is meaningless. If the block creation time is short, the speed of the block chain is fast.If the block creation time is long, the speed of the block chain is slow.
+The block generation time has a great effect on the block chain speed. In a situation where there are not many transactions themselves, TPS is meaningless. If the block creation time is short, the speed of the block chain is fast. If the block creation time is long, the speed of the block chain is slow.
 
-As a result of the agreement method in the block chain, the transaction processing method and the overall performance of the system are different."Do not agree if you have a completely reliable network." The above sentence simply means that you do not need a block chain that increases speed.
+As a result of the agreement method in the block chain, the transaction processing method and the overall performance of the system are different. "Do not agree if you have a completely reliable network. " The above sentence simply means that you do not need a block chain that increases speed.
 
 Block chains were created because of the need for strong trust. If you have strong trust in your system, you do not need a block chain. If you need to trust in the system, the throughput will be sacrificed. This is the problem of current block chain theory.
 
-Is it possible that the speed of the block chain is fast and stable?It may seem impractical, but it is possible.It may be possible if AI(artificial intelligence) is applied to the block chain.What role should artificial intelligence play in the block chain?Let's take the speed as an example. POS is faster than POW.Da Vinci adopted the POS system.TheDaVinci chain can support fast block creation and up to 1000 TPS.The da vinci chain must limit the number of nodes to achieve maximum speed.TheDaVinci chain has greatly improved processing speed by introducing parallel processing using multi-thread.
+Is it possible that the speed of the block chain is fast and stable?It may seem impractical, but it is possible. It may be possible if AI(artificial intelligence) is applied to the block chain. What role should artificial intelligence play in the block chain?Let's take the speed as an example. POS is faster than POW. Da Vinci adopted the POS system. TheDaVinci chain can support fast block creation and up to 1000 TPS. The da vinci chain must limit the number of nodes to achieve maximum speed. TheDaVinci chain has greatly improved processing speed by introducing parallel processing using multi-thread.
 
-Due to the limited number of nodes in the Da Vinci chain, attack targets become clearer. After securing 51%, the da Vinci chain can be neutralized.The da Vinci chain divides the blocks according to their importance.Who evaluates the importance of Da Vinci chain blocks?The correct answer is AI.In the da Vinci chain, machine learning can be used in networks.
+Due to the limited number of nodes in the Da Vinci chain, attack targets become clearer. After securing 51%, the da Vinci chain can be neutralized. The da Vinci chain divides the blocks according to their importance. Who evaluates the importance of Da Vinci chain blocks?The correct answer is AI. In the da Vinci chain, machine learning can be used in networks.
 
-Blockchain technology is an ideal tool for managing network transactions. However, the block chain-based framework must be designed so that AI agents can interact with external customers.Artificial intelligence should be used to automatically classify the importance of incoming customers.The da Vinci chain must manage the creation cycle of the blocks through an external business.
+Blockchain technology is an ideal tool for managing network transactions. However, the block chain-based framework must be designed so that AI agents can interact with external customers. Artificial intelligence should be used to automatically classify the importance of incoming customers. The da Vinci chain must manage the creation cycle of the blocks through an external business.
 
 ##### DAI(DaVinciArtificial Intelligence)
-The da Vinci chain must be vested to make mining possible.The da Vinci mainnet defines whether mining was justified based on the following data. (the hash of the previous block, the time it took for the previous block to be mined, the time it took for the current block to be mined, the address of the miner, the amount of DAC left by the miner in the vest contract)
+The da Vinci chain must be vested to make mining possible. The da Vinci mainnet defines whether mining was justified based on the following data. (the hash of the previous block, the time it took for the previous block to be mined, the time it took for the current block to be mined, the address of the miner, the amount of DAC left by the miner in the vest contract)
 
-DAI DaVinci is the abbreviation of AI engine.DAI makes machine learning the whole process of block verification of da Vinci main net.Artificial intelligence learns the generation cycle of blocks.What does artificial intelligence play in the main net?It is to find out that dangerous events occur on the main net.
+DAI DaVinci is the abbreviation of AI engine. DAI makes machine learning the whole process of block verification of da Vinci main net. Artificial intelligence learns the generation cycle of blocks. What does artificial intelligence play in the main net?It is to find out that dangerous events occur on the main net.
 
-For example, if a person who withdraws $ 1 suddenly withdraws $ 10,000, how should he accept it? If artificial intelligence perceives these changes, you can stop the main net.DAI oversees the main net.Problems can arise with this system. It is the excessive intervention of artificial intelligence within the main net. Automation problems may arise.This is a problem to be solved in the future.
+For example, if a person who withdraws $ 1 suddenly withdraws $ 10,000, how should he accept it? If artificial intelligence perceives these changes, you can stop the main net. DAI oversees the main net. Problems can arise with this system. It is the excessive intervention of artificial intelligence within the main net. Automation problems may arise. This is a problem to be solved in the future.
 
 Dapp is associated with the business of block chain technology. The existing centralized server system and decentralization-based philosophy are strictly different. It's impossible to build an app with a block chain yet. It is a hybrid of app and block chain.
 
@@ -46,23 +59,26 @@ There is a server that hosts the DApp code and acts as a mediator between the us
 
 #### Artificial Intelligence Design Checkpoint of Da Vinci Chain
 ##### Scalability
-The result of the aggregation of the seven extensibility factors is the actual transaction rate / throughput (TPS / throughput).In addition, the seven scalability factors go beyond simple throughput and throughput, and show how flexible they can be in real life.
+The result of the aggregation of the seven extensibility factors is the actual transaction rate / throughput (TPS / throughput). In addition, the seven scalability factors go beyond simple throughput and throughput, and show how flexible they can be in real life.
 <p align="center">
   Component of ScalabilityCore check
 </p>
- 
-1. DPS (Data processing speed)
-The da Vinci chain has a fast DPS(data processing speed). This is because the block size is appropriate. Assignment of block size will be artificial intelligence(DAI).
-2. DVS(Data validation speed)
-DVS(Data validation speed) in the Da Vinci chain Validation within POS systems is important. The faster the validation speed, the less secure it is. It is a matter of the POS system as well as Da Vinci chain. To solve this problem, we construct an artificial neural network DAI.
-3.DNS(Data network relay speed)
-The problem of DNS (data network relay speed) is the problem of connecting to an external network. The network problem with the outside is important to understand and harmonize inside and outside the chain.
-4. Increasing Data Size (storage)
-Increasing Data Size (storage) You should remove obsolete data. To be able to use this function, artificial intelligence learning is necessary.
-5. Number of nodes participating in consensus structure(The number of validators)
-The number of nodes participating in the consensus structure (the number of validators) Adjusting the number of validators is related to stability.
-6. Scalability on codes and applications
-7. On-chain/off-chain governance
+
+<ol>
+  <li>DPS (Data processing speed)<br />
+The da Vinci chain has a fast DPS(data processing speed). This is because the block size is appropriate. Assignment of block size will be artificial intelligence(DAI).</li>
+  <li>DVS(Data validation speed)<br />
+DVS(Data validation speed) in the Da Vinci chain Validation within POS systems is important. The faster the validation speed, the less secure it is. It is a matter of the POS system as well as Da Vinci chain. To solve this problem, we construct an artificial neural network DAI.</li>
+  <li>DNS(Data network relay speed)<br />
+The problem of DNS (data network relay speed) is the problem of connecting to an external network. The network problem with the outside is important to understand and harmonize inside and outside the chain.</li>
+
+  <li>Increasing Data Size (storage)<br />
+You should remove obsolete data. To be able to use this function, artificial intelligence learning is necessary.</li>
+  <li>Number of nodes participating in consensus structure(The number of validators)<br />
+The number of nodes participating in the consensus structure (the number of validators) Adjusting the number of validators is related to stability.</li>
+  <li>Scalability on codes and applications</li>
+  <li>On-chain/off-chain governance</li>
+</ol>
 
 ##### Da Vinci's main net plans to combine the three methods.
 <ol>
@@ -91,11 +107,11 @@ The result is that the nodes are lighter and the transaction processing speed is
 
 In addition, plasma technology that utilizes subchains to minimize the recordings stored in the main chain is expected to be 100 times faster, raising Etherium's operating speed by 10,000 times faster than it is now.
 
-The problem is the forgery and falsification of data. Vitalic likened Sharding to an island.A new algorithm is required for each of these islands to be compatible.
+The problem is the forgery and falsification of data. Vitalic likened Sharding to an island. A new algorithm is required for each of these islands to be compatible.
 
 ##### DAI makes a secure block chain
 
-Block chain is not a complete system. It can be vulnerable to attack at any time.On May 15, 2018, Monaco attacked an attack called Block Withholding Attack (BWA). What is BWA? Blocks are generated by mining to find the computed value. Normally, miners declare on the network as soon as they find a block. The first person who finds it is given a coin as a payoff.
+Block chain is not a complete system. It can be vulnerable to attack at any time. On May 15, 2018, Monaco attacked an attack called Block Withholding Attack (BWA). What is BWA? Blocks are generated by mining to find the computed value. Normally, miners declare on the network as soon as they find a block. The first person who finds it is given a coin as a payoff.
 
 However, if the hash power (computation speed) is high, the block that has already been found may not be declared intentionally. It is then possible to mine the next block without informing the network
 
@@ -125,7 +141,7 @@ When a new block appears, the chain is split into two bifurcations. In a block c
 
 Because the attacker's block chain is longer, it is considered a legitimate chain. Existing chains are culled and disappear. Block re-organization.
 
-There is transaction history (existing chain coin -> other coin) in coin exchange in existing chain. The existing chain disappears and the transaction history disappears.For this reason, the coin that was used to purchase another coin is returned.Moving the returned coin to your personal wallet will record the coin returned to the attacker's personal wallet in the new block chain created by the attacker.
+There is transaction history (existing chain coin -> other coin) in coin exchange in existing chain. The existing chain disappears and the transaction history disappears. For this reason, the coin that was used to purchase another coin is returned. Moving the returned coin to your personal wallet will record the coin returned to the attacker's personal wallet in the new block chain created by the attacker.
 
 Coins of existing block chain and new block chain overlap. At this time, the existing coin that had purchased another coin disappears and only the coin in the attacker's personal wallet is left.
 
@@ -139,9 +155,9 @@ Suppose an attacker made a fake block to attack a block chain. The verifier must
 
 In the PBFT (Practical Byzantine Fault Tolerance) algorithm, there is no recurrence of the block chain. However, if you have more than one-third share, you can attack against the block chain. This is lower than 51% of PoW.
 
-Therefore, PoSis more disadvantageous in terms of defending against malicious attack than PoW.In order to defend against malicious attacks, the number of nodes must be increased.
+Therefore, PoSis more disadvantageous in terms of defending against malicious attack than PoW. In order to defend against malicious attacks, the number of nodes must be increased.
 
-However, in PBFT, as the number of nodes increases, the amount of traffic increases sharply. Therefore, more time is required for block generation.In general, the block time (waiting time to complete the transaction) is shorter and faster. I have preferred 5 minutes rather than 10 minutes, 1 minute than 5 minutes, 10 seconds than 1 minute.
+However, in PBFT, as the number of nodes increases, the amount of traffic increases sharply. Therefore, more time is required for block generation. In general, the block time (waiting time to complete the transaction) is shorter and faster. I have preferred 5 minutes rather than 10 minutes, 1 minute than 5 minutes, 10 seconds than 1 minute.
 
 However, since short block generation time and security are currently incompatible, the number of approvals must be increased accordingly. In order to improve the speed of transactions, therefore, new measures should be developed.
 
@@ -162,7 +178,7 @@ DAI is a smart contract automatic verification system. Artificial intelligence a
 
 The learned artificial intelligence verifies the dangerous changes of blocks. First, we use artificial neural networks to learn the changes of smart contracts and blocks and collect data. As a result, it learns the pattern of smart contract and block mechanically. Finally, the stability of the chain is maintained by using deep running.
 
-Deep learning is called 'Deep Neural Network' (DNN), which imitates human neural networks.And solves 'complex problems' through 'iterative process' of updating parameters which are relations between layers.Da Vinci's artificial intelligence system uses deep learning to machine a repetitive process of blocks to create a pattern.
+Deep learning is called 'Deep Neural Network' (DNN), which imitates human neural networks. And solves 'complex problems' through 'iterative process' of updating parameters which are relations between layers. Da Vinci's artificial intelligence system uses deep learning to machine a repetitive process of blocks to create a pattern.
 
 DaVinci's Artificial Intelligence (DAI) automatically learns repetitive processes in block chains and Dapp. The artificial intelligence can learn repetitive processes by itself to prepare for problems that may arise. Da Vinci AI engine aims to Unsupervised Learning. Unsupervised learning is a process in which the algorithm itself learns the relationship and specificity of data without providing a solution to specific data.
 
