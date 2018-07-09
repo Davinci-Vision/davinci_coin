@@ -2,11 +2,10 @@
 ![Alt text](http://uml.kr/images/davinci_bg.png "The davinci")
 
 <p align="center">
-  <br /><br /><br /><br />
+  <br /><br />
   <h3>Paul koh(cto@davinci.vision)</h3>
   <h3>Davinci Partners Inc.</h3>
   <h3>July 09.2018</h3>
-  <br />
   <h5>(version 0.5)</h5>
   <br /><br />
   <br />
