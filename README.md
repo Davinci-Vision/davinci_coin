@@ -64,17 +64,17 @@ The result of the aggregation of the seven extensibility factors is the actual t
 
 <ol>
   <li><b>DPS (Data processing speed)</b><br />
-The da Vinci chain has a fast DPS(data processing speed). This is because the block size is appropriate. Assignment of block size will be artificial intelligence(DAI).</li>
+The da Vinci chain has a fast DPS(data processing speed). This is because the block size is appropriate. Assignment of block size will be artificial intelligence(DAI).</li><br />
   <li><b>DVS(Data validation speed)</b><br />
-DVS(Data validation speed) in the Da Vinci chain Validation within POS systems is important. The faster the validation speed, the less secure it is. It is a matter of the POS system as well as Da Vinci chain. To solve this problem, we construct an artificial neural network DAI.</li>
+DVS(Data validation speed) in the Da Vinci chain Validation within POS systems is important. The faster the validation speed, the less secure it is. It is a matter of the POS system as well as Da Vinci chain. To solve this problem, we construct an artificial neural network DAI.</li><br />
   <li><b>DNS(Data network relay speed)</b><br />
-The problem of DNS (data network relay speed) is the problem of connecting to an external network. The network problem with the outside is important to understand and harmonize inside and outside the chain.</li>
+The problem of DNS (data network relay speed) is the problem of connecting to an external network. The network problem with the outside is important to understand and harmonize inside and outside the chain.</li><br />
 
   <li><b>Increasing Data Size (storage)</b><br />
-You should remove obsolete data. To be able to use this function, artificial intelligence learning is necessary.</li>
+You should remove obsolete data. To be able to use this function, artificial intelligence learning is necessary.</li><br />
   <li><b>Number of nodes participating in consensus structure(The number of validators)</b><br />
-The number of nodes participating in the consensus structure (the number of validators) Adjusting the number of validators is related to stability.</li>
-  <li><b>Scalability on codes and applications</b></li>
+The number of nodes participating in the consensus structure (the number of validators) Adjusting the number of validators is related to stability.</li><br />
+  <li><b>Scalability on codes and applications</b></li><br />
   <li><b>On-chain/off-chain governance</b></li>
 </ol>
 
