@@ -1,12 +1,11 @@
 #  3rd Generation A.I Block Chain DaVinciWhite Paper (0.5) 
 ![Alt text](http://uml.kr/images/davinci_bg.png "The davinci")
-
 <p align="center">
   <br /><br />
-  <h3>Paul koh(cto@davinci.vision)</h3>
-  <h3>Davinci Partners Inc.</h3>
-  <h3>July 09.2018</h3>
-  <h5>(version 0.5)</h5>
+  <h3 align="center">Paul koh(cto@davinci.vision)</h3>
+  <h3 align="center">Davinci Partners Inc.</h3>
+  <h3 align="center">July 09.2018</h3>
+  <h5 align="center">(version 0.5)</h5>
   <br /><br />
   <br />
 </p>
@@ -64,19 +63,19 @@ The result of the aggregation of the seven extensibility factors is the actual t
 </p>
 
 <ol>
-  <li>DPS (Data processing speed)<br />
+  <li><b>DPS (Data processing speed)</b><br />
 The da Vinci chain has a fast DPS(data processing speed). This is because the block size is appropriate. Assignment of block size will be artificial intelligence(DAI).</li>
-  <li>DVS(Data validation speed)<br />
+  <li><b>DVS(Data validation speed)</b><br />
 DVS(Data validation speed) in the Da Vinci chain Validation within POS systems is important. The faster the validation speed, the less secure it is. It is a matter of the POS system as well as Da Vinci chain. To solve this problem, we construct an artificial neural network DAI.</li>
-  <li>DNS(Data network relay speed)<br />
+  <li><b>DNS(Data network relay speed)</b><br />
 The problem of DNS (data network relay speed) is the problem of connecting to an external network. The network problem with the outside is important to understand and harmonize inside and outside the chain.</li>
 
-  <li>Increasing Data Size (storage)<br />
+  <li><b>Increasing Data Size (storage)</b><br />
 You should remove obsolete data. To be able to use this function, artificial intelligence learning is necessary.</li>
-  <li>Number of nodes participating in consensus structure(The number of validators)<br />
+  <li><b>Number of nodes participating in consensus structure(The number of validators)</b><br />
 The number of nodes participating in the consensus structure (the number of validators) Adjusting the number of validators is related to stability.</li>
-  <li>Scalability on codes and applications</li>
-  <li>On-chain/off-chain governance</li>
+  <li><b>Scalability on codes and applications</b></li>
+  <li><b>On-chain/off-chain governance</b></li>
 </ol>
 
 ##### Da Vinci's main net plans to combine the three methods.
