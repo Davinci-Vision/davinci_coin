@@ -21,9 +21,9 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/state"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 )
 
 var (

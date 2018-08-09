@@ -17,14 +17,14 @@
 package core
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/misc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/state"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/vm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 )
 
 // StateProcessor is a basic Processor, which takes care of transitioning

@@ -26,12 +26,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/internal/jsre"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/ethash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/internal/jsre"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/node"
 )
 
 const (

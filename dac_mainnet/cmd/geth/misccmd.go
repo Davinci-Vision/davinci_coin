@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/cmd/utils"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/ethash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

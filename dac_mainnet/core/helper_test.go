@@ -19,9 +19,9 @@ package core
 import (
 	"container/list"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/ethdb"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/event"
 )
 
 // Implement our EthTest Manager

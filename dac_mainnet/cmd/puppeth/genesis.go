@@ -21,11 +21,11 @@ import (
 	"errors"
 	"math"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/hexutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/ethash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 )
 
 // cppEthereumGenesisSpec represents the genesis specification format used by the

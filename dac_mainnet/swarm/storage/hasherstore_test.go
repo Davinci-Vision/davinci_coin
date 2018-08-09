@@ -21,9 +21,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm/storage/encryption"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage/encryption"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
 )
 
 func TestHasherStore(t *testing.T) {

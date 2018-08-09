@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 var seed int64

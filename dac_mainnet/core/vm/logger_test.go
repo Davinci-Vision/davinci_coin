@@ -20,8 +20,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 )
 
 type dummyContractRef struct {

@@ -25,9 +25,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/event"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rlp"
 )
 
 // Msg defines the structure of a p2p message.

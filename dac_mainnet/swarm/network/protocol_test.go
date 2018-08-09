@@ -23,11 +23,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	p2ptest "github.com/ethereum/go-ethereum/p2p/testing"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/protocols"
+	p2ptest "github.com/davinciproject/davinci_coin/dac_mainnet/p2p/testing"
 )
 
 var (

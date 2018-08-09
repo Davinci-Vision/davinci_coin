@@ -28,8 +28,8 @@ import (
 	"strings"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/node"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
 )
 
 var (

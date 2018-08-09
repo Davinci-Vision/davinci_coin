@@ -20,17 +20,17 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
 )
 
 /*
 http roundtripper to register for bzz url scheme
-see https://github.com/ethereum/go-ethereum/issues/2040
+see https://github.com/davinciproject/davinci_coin/dac_mainnet/issues/2040
 Usage:
 
 import (
- "github.com/ethereum/go-ethereum/common/httpclient"
- "github.com/ethereum/go-ethereum/swarm/api/http"
+ "github.com/davinciproject/davinci_coin/dac_mainnet/common/httpclient"
+ "github.com/davinciproject/davinci_coin/dac_mainnet/swarm/api/http"
 )
 client := httpclient.New()
 // for (private) swarm proxy running locally

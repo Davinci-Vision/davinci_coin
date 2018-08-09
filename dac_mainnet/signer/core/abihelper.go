@@ -22,8 +22,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/accounts/abi"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
 
 	"bytes"
 	"os"

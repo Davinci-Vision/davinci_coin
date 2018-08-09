@@ -21,9 +21,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/internal/ethapi"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
 )
 
 type StdIOUI struct {

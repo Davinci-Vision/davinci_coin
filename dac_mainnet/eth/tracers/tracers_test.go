@@ -25,15 +25,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/hexutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/math"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/vm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/ethdb"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rlp"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/tests"
 )
 
 // To generate a new callTracer test, copy paste the makeTest method below into

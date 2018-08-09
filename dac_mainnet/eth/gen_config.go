@@ -5,12 +5,12 @@ package eth
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/hexutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/ethash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth/downloader"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth/gasprice"
 )
 
 var _ = (*configMarshaling)(nil)

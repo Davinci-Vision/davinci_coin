@@ -24,12 +24,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/hexutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rlp"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
 )
 
 // Client defines typed wrappers for the Ethereum RPC API.

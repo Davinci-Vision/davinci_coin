@@ -22,12 +22,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth/downloader"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rlp"
 )
 
 func init() {

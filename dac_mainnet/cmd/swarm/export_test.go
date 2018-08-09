@@ -27,7 +27,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm"
 )
 
 // TestCLISwarmExportImport perform the following test:

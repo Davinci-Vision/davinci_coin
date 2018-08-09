@@ -20,8 +20,8 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/multihash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/multihash"
 )
 
 // resourceUpdate encapsulates the information sent as part of a resource update

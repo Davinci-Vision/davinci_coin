@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/ethash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/vm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/ethdb"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 )
 
 func ExampleGenerateChain() {

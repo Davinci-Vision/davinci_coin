@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/mclock"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/event"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rlp"
 )
 
 var (

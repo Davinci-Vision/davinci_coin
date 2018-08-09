@@ -20,8 +20,8 @@ import (
 	"context"
 	"net"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/netutil"
 )
 
 // ServeListener accepts connections on l, serving JSON-RPC on them.

@@ -22,8 +22,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/math"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/vm"
 )
 
 // Compiler contains information about the parsed source

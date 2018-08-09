@@ -34,7 +34,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
 )
 
 // Handler is the global debugging handler.

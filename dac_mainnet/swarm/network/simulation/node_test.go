@@ -23,11 +23,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/swarm/network"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/node"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/simulations/adapters"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/network"
 )
 
 func TestUpDownNodeIDs(t *testing.T) {

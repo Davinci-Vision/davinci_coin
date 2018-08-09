@@ -22,7 +22,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/core/asm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/asm"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

@@ -23,13 +23,13 @@ import (
 	"net"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/simulations/pipes"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/event"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/node"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/simulations/pipes"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
 )
 
 // SimAdapter is a NodeAdapter which creates in-memory simulation nodes and

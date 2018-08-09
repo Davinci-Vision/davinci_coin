@@ -25,13 +25,13 @@ import (
 	"time"
 
 	mapset "github.com/deckarep/golang-set"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/math"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/misc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/state"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
 )
 
 // Ethash proof-of-work protocol constants.

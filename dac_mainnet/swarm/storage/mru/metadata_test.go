@@ -18,7 +18,7 @@ package mru
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/hexutil"
 )
 
 func compareByteSliceToExpectedHex(t *testing.T, variableName string, actualValue []byte, expectedHex string) {

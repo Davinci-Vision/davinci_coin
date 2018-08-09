@@ -28,9 +28,9 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/ethereum/go-ethereum/internal/jsre"
-	"github.com/ethereum/go-ethereum/internal/web3ext"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/internal/jsre"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/internal/web3ext"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
 	"github.com/mattn/go-colorable"
 	"github.com/peterh/liner"
 	"github.com/robertkrimen/otto"

@@ -19,7 +19,7 @@ package mem
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm/storage/mock/test"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage/mock/test"
 )
 
 // TestGlobalStore is running test for a GlobalStore

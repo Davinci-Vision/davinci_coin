@@ -21,7 +21,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm/state"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/state"
 )
 
 // TestDBStore tests basic functionality of DBStore.

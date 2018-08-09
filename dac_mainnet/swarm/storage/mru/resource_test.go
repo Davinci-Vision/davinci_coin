@@ -27,11 +27,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/multihash"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/contracts/ens"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/multihash"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage"
 )
 
 var (

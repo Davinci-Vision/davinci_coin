@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/node"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
 )
 
 // SampleService is a trivial network service that can be attached to a node for

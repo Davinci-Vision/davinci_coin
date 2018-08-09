@@ -26,7 +26,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
 )
 
 const (

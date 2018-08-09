@@ -26,7 +26,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
 )
 
 type storedCredential struct {

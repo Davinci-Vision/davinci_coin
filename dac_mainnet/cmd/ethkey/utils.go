@@ -22,9 +22,9 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/cmd/utils"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/console"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 	"gopkg.in/urfave/cli.v1"
 )
 

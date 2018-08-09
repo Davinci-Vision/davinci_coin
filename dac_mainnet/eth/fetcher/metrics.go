@@ -19,7 +19,7 @@
 package fetcher
 
 import (
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/metrics"
 )
 
 var (

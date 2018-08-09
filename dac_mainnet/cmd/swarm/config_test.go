@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm"
-	"github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/api"
 
 	"github.com/docker/docker/pkg/reexec"
 )

@@ -19,7 +19,7 @@ package event_test
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/event"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/event"
 )
 
 func ExampleNewSubscription() {

@@ -25,11 +25,11 @@ import (
 	"io/ioutil"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/contracts/chequebook/contract"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/accounts/abi/bind"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/accounts/abi/bind/backends"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/contracts/chequebook/contract"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 var (

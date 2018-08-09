@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
 )
 
 type testInPayment struct {

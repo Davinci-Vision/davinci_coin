@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/crypto/sha3"
-	"github.com/ethereum/go-ethereum/swarm/storage/encryption"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto/sha3"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage/encryption"
 )
 
 type chunkEncryption struct {
