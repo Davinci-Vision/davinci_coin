@@ -300,7 +300,7 @@ func TestMultiResolver(t *testing.T) {
 			desc: "Default resolver doesn't resolve, tld resolver resolve, returns resolved address",
 			r: NewMultiResolver(
 				MultiResolverOptionWithResolver(doesntResolve, ""),
-				MultiResolverOptionWithResolver(ethResolve, "eth"),
+				MultiResolverOptionWithResolver(ethResolve, "dac"),
 			),
 			addr:   ethAddr,
 			result: ethHash,
@@ -308,9 +308,9 @@ func TestMultiResolver(t *testing.T) {
 		{
 			desc: "Three TLD resolvers, third resolves, returns resolved address",
 			r: NewMultiResolver(
-				MultiResolverOptionWithResolver(doesntResolve, "eth"),
-				MultiResolverOptionWithResolver(doesntResolve, "eth"),
-				MultiResolverOptionWithResolver(ethResolve, "eth"),
+				MultiResolverOptionWithResolver(doesntResolve, "dac"),
+				MultiResolverOptionWithResolver(doesntResolve, "dac"),
+				MultiResolverOptionWithResolver(ethResolve, "dac"),
 			),
 			addr:   ethAddr,
 			result: ethHash,
@@ -319,7 +319,7 @@ func TestMultiResolver(t *testing.T) {
 			desc: "One TLD resolver doesn't resolve, returns error",
 			r: NewMultiResolver(
 				MultiResolverOptionWithResolver(doesntResolve, ""),
-				MultiResolverOptionWithResolver(ethResolve, "eth"),
+				MultiResolverOptionWithResolver(ethResolve, "dac"),
 			),
 			addr:   ethAddr,
 			result: ethHash,
@@ -328,7 +328,7 @@ func TestMultiResolver(t *testing.T) {
 			desc: "One defautl and one TLD resolver, all doesn't resolve, returns error",
 			r: NewMultiResolver(
 				MultiResolverOptionWithResolver(doesntResolve, ""),
-				MultiResolverOptionWithResolver(doesntResolve, "eth"),
+				MultiResolverOptionWithResolver(doesntResolve, "dac"),
 			),
 			addr:   ethAddr,
 			result: ethHash,
@@ -337,7 +337,7 @@ func TestMultiResolver(t *testing.T) {
 		{
 			desc: "Two TLD resolvers, both resolve, returns resolved address",
 			r: NewMultiResolver(
-				MultiResolverOptionWithResolver(ethResolve, "eth"),
+				MultiResolverOptionWithResolver(ethResolve, "dac"),
 				MultiResolverOptionWithResolver(testResolve, "test"),
 			),
 			addr:   testAddr,
@@ -346,7 +346,7 @@ func TestMultiResolver(t *testing.T) {
 		{
 			desc: "One TLD resolver, no default resolver, returns error for different TLD",
 			r: NewMultiResolver(
-				MultiResolverOptionWithResolver(ethResolve, "eth"),
+				MultiResolverOptionWithResolver(ethResolve, "dac"),
 			),
 			addr: testAddr,
 			err:  NewNoResolverError("test"),
