@@ -3830,6 +3830,7 @@ var outputBlockFormatter = function(block) {
 
     block.difficulty = utils.toBigNumber(block.difficulty);
     block.totalDifficulty = utils.toBigNumber(block.totalDifficulty);
+    block.stakeAmount = utils.toBigNumber(block.stakeAmount);
 
     if (utils.isArray(block.transactions)) {
         block.transactions.forEach(function(item){

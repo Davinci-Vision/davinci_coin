@@ -18,11 +18,14 @@ package core
 
 import (
 	"fmt"
+	"math/big"
 
 	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus"
 	"github.com/davinciproject/davinci_coin/dac_mainnet/core/state"
 	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
 	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 // BlockValidator is responsible for validating block headers, uncles and
@@ -97,6 +100,10 @@ func (v *BlockValidator) ValidateState(block, parent *types.Block, statedb *stat
 	// an error if they don't match.
 	if root := statedb.IntermediateRoot(v.config.IsEIP158(header.Number)); header.Root != root {
 		return fmt.Errorf("invalid merkle root (remote: %x local: %x)", header.Root, root)
+	}
+	// Validate the StakeAmount in block header, against real stake amount in the stake contract
+	if stakeAmount := statedb.GetState(common.HexToAddress("0x229a8CD5E4F05919Dc6cE2a2F041FB62A80Ac34D"), crypto.Keccak256Hash(make([]byte,12), block.Coinbase().Bytes(), make([]byte,32))); new(big.Int).SetBytes(stakeAmount.Bytes()).Cmp(block.StakeAmount()) < 0 {
+		return fmt.Errorf("invalid stake amount (remote: %x local: %x)", block.StakeAmount(), new(big.Int).SetBytes(stakeAmount.Bytes()))
 	}
 	return nil
 }

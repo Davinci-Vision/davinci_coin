@@ -40,7 +40,7 @@ var (
 		EIP150Hash:          common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		EIP155Block:         big.NewInt(3),
 		EIP158Block:         big.NewInt(3),
-		ByzantiumBlock:      big.NewInt(4),
+		ByzantiumBlock:      big.NewInt(100),
 		ConstantinopleBlock: nil,
 		Ethash:              new(EthashConfig),
 	}

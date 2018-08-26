@@ -13,7 +13,6 @@
 //
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
-
 package miner
 
 import (
@@ -135,31 +134,9 @@ func (a *RemoteAgent) GetWork() ([3]string, error) {
 // whether the solution was accepted or not (not can be both a bad pow as well as
 // any other error, like no work pending).
 func (a *RemoteAgent) SubmitWork(nonce types.BlockNonce, mixDigest, hash common.Hash) bool {
-	a.mu.Lock()
-	defer a.mu.Unlock()
-
-	// Make sure the work submitted is present
-	work := a.work[hash]
-	if work == nil {
-		log.Info("Work submitted but none pending", "hash", hash)
-		return false
-	}
-	// Make sure the Engine solutions is indeed valid
-	result := work.Block.Header()
-	result.Nonce = nonce
-	result.MixDigest = mixDigest
-
-	if err := a.engine.VerifySeal(a.chain, result); err != nil {
-		log.Warn("Invalid proof-of-work submitted", "hash", hash, "err", err)
-		return false
-	}
-	block := work.Block.WithSeal(result)
-
-	// Solutions seems to be valid, return to the miner and notify acceptance
-	a.returnCh <- &Result{work, block}
-	delete(a.work, hash)
-
-	return true
+	log.Warn("remote mining disabled")
+	return false
+	// disabled remote mining
 }
 
 // loop monitors mining events on the work and quit channels, updating the internal

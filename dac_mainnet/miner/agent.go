@@ -21,8 +21,12 @@ import (
 
 	"sync/atomic"
 
+	"math/big"
+
 	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus"
 	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 type CpuAgent struct {
@@ -100,7 +104,8 @@ out:
 }
 
 func (self *CpuAgent) mine(work *Work, stop <-chan struct{}) {
-	if result, err := self.engine.Seal(self.chain, work.Block, stop); result != nil {
+	stakeAmount := work.state.GetState(common.HexToAddress("0x229a8CD5E4F05919Dc6cE2a2F041FB62A80Ac34D"), crypto.Keccak256Hash(make([]byte,12), work.Block.Coinbase().Bytes(), make([]byte,32)))
+	if result, err := self.engine.Seal(self.chain, work.Block, new(big.Int).SetBytes(stakeAmount.Bytes()), stop); result != nil {
 		log.Info("Successfully sealed new block", "number", result.Number(), "hash", result.Hash())
 		self.returnCh <- &Result{work, result}
 	} else {
