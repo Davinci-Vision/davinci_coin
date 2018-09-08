@@ -16,11 +16,6 @@ gdac:
 	@echo "Done building."
 	@echo "Run \"$(GOBIN)/gdac\" to launch gdac."
 
-swarm:
-	build/env.sh go run build/ci.go install ./cmd/swarm
-	@echo "Done building."
-	@echo "Run \"$(GOBIN)/swarm\" to launch swarm."
-
 all:
 	build/env.sh go run build/ci.go install
 
