@@ -213,6 +213,8 @@ func (g *Genesis) configOrDefault(ghash common.Hash) *params.ChainConfig {
 		return params.MainnetChainConfig
 	case ghash == params.TestnetGenesisHash:
 		return params.TestnetChainConfig
+	case ghash == params.RinkebyGenesisHash:
+		return params.RinkebyChainConfig
 	default:
 		return params.AllEthashProtocolChanges
 	}
