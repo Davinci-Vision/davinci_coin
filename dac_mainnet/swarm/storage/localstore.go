@@ -23,9 +23,9 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/storage/mock"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/metrics"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage/mock"
 )
 
 type LocalStoreParams struct {

@@ -20,9 +20,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/light"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/rawdb"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth/downloader"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/light"
 )
 
 // syncer is responsible for periodically synchronising with the network, both

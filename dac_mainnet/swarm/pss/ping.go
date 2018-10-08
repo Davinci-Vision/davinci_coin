@@ -23,9 +23,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/protocols"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
 )
 
 // Generic ping protocol implementation for

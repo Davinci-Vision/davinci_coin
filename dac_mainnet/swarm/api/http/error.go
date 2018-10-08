@@ -28,10 +28,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/swarm/api"
-	l "github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/metrics"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/api"
+	l "github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
 )
 
 //templateMap holds a mapping of an HTTP error code to a template

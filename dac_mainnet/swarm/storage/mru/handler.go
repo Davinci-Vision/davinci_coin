@@ -26,8 +26,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage"
 )
 
 const chunkSize = 4096 // temporary until we implement FileStore in the resourcehandler

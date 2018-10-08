@@ -19,7 +19,7 @@ package bloombits
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
 )
 
 var (

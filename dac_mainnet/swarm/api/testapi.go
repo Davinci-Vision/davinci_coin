@@ -17,7 +17,7 @@
 package api
 
 import (
-	"github.com/ethereum/go-ethereum/swarm/network"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/network"
 )
 
 type Control struct {

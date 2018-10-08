@@ -28,10 +28,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/api"
 )
 
 // TestNewSwarm validates Swarm fields in repsect to the provided configuration.
@@ -263,14 +263,14 @@ func TestParseEnsAPIAddress(t *testing.T) {
 			value:       "eth:314159265dD8dbb310642f98f50C066173C1259b@http://127.0.0.1:1234",
 			endpoint:    "http://127.0.0.1:1234",
 			addr:        common.HexToAddress("314159265dD8dbb310642f98f50C066173C1259b"),
-			tld:         "eth",
+			tld:         "dac",
 		},
 		{
 			description: "WS endpoint, TLD and contract address",
 			value:       "eth:314159265dD8dbb310642f98f50C066173C1259b@ws://127.0.0.1:1234",
 			endpoint:    "ws://127.0.0.1:1234",
 			addr:        common.HexToAddress("314159265dD8dbb310642f98f50C066173C1259b"),
-			tld:         "eth",
+			tld:         "dac",
 		},
 	} {
 		t.Run(x.description, func(t *testing.T) {

@@ -24,7 +24,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/swarm/network"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/network"
 )
 
 var (

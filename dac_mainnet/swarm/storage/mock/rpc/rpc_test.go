@@ -19,9 +19,9 @@ package rpc
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm/storage/mock/mem"
-	"github.com/ethereum/go-ethereum/swarm/storage/mock/test"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage/mock/mem"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage/mock/test"
 )
 
 // TestDBStore is running test for a GlobalStore

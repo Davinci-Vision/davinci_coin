@@ -19,8 +19,8 @@ package les
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/bitutil"
-	"github.com/ethereum/go-ethereum/light"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/bitutil"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/light"
 )
 
 const (

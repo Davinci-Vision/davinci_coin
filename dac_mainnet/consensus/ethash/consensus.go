@@ -25,13 +25,14 @@ import (
 	"time"
 
 	mapset "github.com/deckarep/golang-set"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common/math"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus/misc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/state"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/params"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 // Ethash proof-of-work protocol constants.
@@ -39,7 +40,7 @@ var (
 	FrontierBlockReward    *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
 	ByzantiumBlockReward   *big.Int = big.NewInt(3e+18) // Block reward in wei for successfully mining a block upward from Byzantium
 	maxUncles                       = 2                 // Maximum number of uncles allowed in a single block
-	allowedFutureBlockTime          = 15 * time.Second  // Max time from current time allowed for blocks, before they're considered future blocks
+	allowedFutureBlockTime          = 0 * time.Second  // Max time from current time allowed for blocks, before they're considered future blocks
 )
 
 // Various error messages to mark blocks invalid. These should be private to
@@ -56,6 +57,7 @@ var (
 	errInvalidDifficulty = errors.New("non-positive difficulty")
 	errInvalidMixDigest  = errors.New("invalid mix digest")
 	errInvalidPoW        = errors.New("invalid proof-of-work")
+	errInvalidPoS        = errors.New("invalid proof-of-stake")
 )
 
 // Author implements consensus.Engine, returning the header's coinbase as the
@@ -270,7 +272,7 @@ func (ethash *Ethash) verifyHeader(chain consensus.ChainReader, header, parent *
 	}
 	// Verify the engine specific seal securing the block
 	if seal {
-		if err := ethash.VerifySeal(chain, header); err != nil {
+		if err := ethash.VerifySeal(chain, header, parent); err != nil {
 			return err
 		}
 	}
@@ -288,18 +290,18 @@ func (ethash *Ethash) verifyHeader(chain consensus.ChainReader, header, parent *
 // the difficulty that a new block should have when created at time
 // given the parent block's time and difficulty.
 func (ethash *Ethash) CalcDifficulty(chain consensus.ChainReader, time uint64, parent *types.Header) *big.Int {
-	return CalcDifficulty(chain.Config(), time, parent)
+	return CalcDifficulty(chain, time, parent)
 }
 
 // CalcDifficulty is the difficulty adjustment algorithm. It returns
 // the difficulty that a new block should have when created at time
 // given the parent block's time and difficulty.
-func CalcDifficulty(config *params.ChainConfig, time uint64, parent *types.Header) *big.Int {
+func CalcDifficulty(chain consensus.ChainReader, time uint64, parent *types.Header) *big.Int {
 	next := new(big.Int).Add(parent.Number, big1)
 	switch {
-	case config.IsByzantium(next):
-		return calcDifficultyByzantium(time, parent)
-	case config.IsHomestead(next):
+	case chain.Config().IsByzantium(next):
+		return calcDifficultyByzantium(chain, time, parent)
+	case chain.Config().IsHomestead(next):
 		return calcDifficultyHomestead(time, parent)
 	default:
 		return calcDifficultyFrontier(time, parent)
@@ -312,34 +314,36 @@ var (
 	big1          = big.NewInt(1)
 	big2          = big.NewInt(2)
 	big5          = big.NewInt(5)
+	big45         = big.NewInt(45)
 	big9          = big.NewInt(9)
 	big10         = big.NewInt(10)
 	bigMinus99    = big.NewInt(-99)
 	big2999999    = big.NewInt(2999999)
+	big1000000000 = big.NewInt(1000000000)
 )
 
 // calcDifficultyByzantium is the difficulty adjustment algorithm. It returns
 // the difficulty that a new block should have when created at time given the
 // parent block's time and difficulty. The calculation uses the Byzantium rules.
-func calcDifficultyByzantium(time uint64, parent *types.Header) *big.Int {
+func calcDifficultyByzantium(chain consensus.ChainReader, time uint64, parent *types.Header) *big.Int {
 	// algorithm:
-	// diff = parent_diff * 5 / (timestamp - parent.timestamp)
+	// diff = parent_diff * 15 / (past 3 block time)
 
-	bigTime := new(big.Int).SetUint64(time)
 	bigParentTime := new(big.Int).Set(parent.Time)
+	bigAncestorTime := new(big.Int).Set(chain.GetHeaderByNumber(parent.Number.Uint64() - 3).Time)
 
 	// holds intermediate values to make the algo easier to read & audit
 	x := new(big.Int)
 	y := new(big.Int)
 
-	x.Sub(bigTime, bigParentTime)
-	y.Mul(parent.Difficulty, big5)
+	x.Sub(bigParentTime, bigAncestorTime)
+	y.Mul(parent.Difficulty, big45)
 	x.Div(y, x)
 
 
 	// minimum difficulty can ever be (before exponential factor)
-	if x.Cmp(big10) < 0 {
-		x.Set(big10)
+	if x.Cmp(big1000000000) < 0 {
+		x.Set(big1000000000)
 	}
 	return x
 }
@@ -428,7 +432,7 @@ func calcDifficultyFrontier(time uint64, parent *types.Header) *big.Int {
 
 // VerifySeal implements consensus.Engine, checking whether the given block satisfies
 // the PoW difficulty requirements.
-func (ethash *Ethash) VerifySeal(chain consensus.ChainReader, header *types.Header) error {
+func (ethash *Ethash) VerifySeal(chain consensus.ChainReader, header *types.Header, parent *types.Header) error {
 	// If we're running a fake PoW, accept any seal as valid
 	if ethash.config.PowMode == ModeFake || ethash.config.PowMode == ModeFullFake {
 		time.Sleep(ethash.fakeDelay)
@@ -439,32 +443,52 @@ func (ethash *Ethash) VerifySeal(chain consensus.ChainReader, header *types.Head
 	}
 	// If we're running a shared PoW, delegate verification to it
 	if ethash.shared != nil {
-		return ethash.shared.VerifySeal(chain, header)
+		return ethash.shared.VerifySeal(chain, header, parent)
 	}
 	// Ensure that we have a valid difficulty for the block
 	if header.Difficulty.Sign() <= 0 {
 		return errInvalidDifficulty
 	}
-	// Recompute the digest and PoW value and verify against the header
-	number := header.Number.Uint64()
 
-	cache := ethash.cache(number)
-	size := datasetSize(number)
-	if ethash.config.PowMode == ModeTest {
-		size = 32 * 1024
-	}
-	digest, result := hashimotoLight(size, cache.cache, header.HashNoNonce().Bytes(), header.Nonce.Uint64())
-	// Caches are unmapped in a finalizer. Ensure that the cache stays live
-	// until after the call to hashimotoLight so it's not unmapped while being used.
-	runtime.KeepAlive(cache)
 
-	if !bytes.Equal(header.MixDigest[:], digest) {
-		return errInvalidMixDigest
+	if !chain.Config().IsByzantium(header.Number) { // POW verification on blocks before byzantium
+		// Recompute the digest and PoW value and verify against the header
+		number := header.Number.Uint64()
+
+		cache := ethash.cache(number)
+		size := datasetSize(number)
+		if ethash.config.PowMode == ModeTest {
+			size = 32 * 1024
+		}
+		digest, result := hashimotoLight(size, cache.cache, header.HashNoNonce().Bytes(), header.Nonce.Uint64())
+		// Caches are unmapped in a finalizer. Ensure that the cache stays live
+		// until after the call to hashimotoLight so it's not unmapped while being used.
+		runtime.KeepAlive(cache)
+
+		if !bytes.Equal(header.MixDigest[:], digest) {
+			return errInvalidMixDigest
+		}
+		target := new(big.Int).Div(maxUint256, header.Difficulty)
+		if new(big.Int).SetBytes(result).Cmp(target) > 0 {
+			return errInvalidPoW
+		}
+	} else { // POS verification on byzantium or after
+		difficulty := header.Difficulty
+		coinbase := header.Coinbase
+		stakeAmount := header.StakeAmount
+		parentHash := header.ParentHash
+		blockTime := new(big.Int).Sub(header.Time, parent.Time)
+
+		if stakeAmount.Cmp(big.NewInt(0)) <= 0 {
+			return errInvalidPoS
+		}
+		target := new(big.Int).Div( new(big.Int).Mul(new(big.Int).Mul(blockTime, stakeAmount), maxUint256) , difficulty)
+		result := new(big.Int).SetBytes(crypto.Keccak256(parentHash.Bytes(), coinbase.Bytes()))
+		if result.Cmp(target) > 0 {
+			return errInvalidPoS
+		}
 	}
-	target := new(big.Int).Div(maxUint256, header.Difficulty)
-	if new(big.Int).SetBytes(result).Cmp(target) > 0 {
-		return errInvalidPoW
-	}
+
 	return nil
 }
 

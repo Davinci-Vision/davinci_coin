@@ -21,7 +21,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/ethereum/go-ethereum/eth/tracers/internal/tracers"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/eth/tracers/internal/tracers"
 )
 
 // all contains all the built in JavaScript tracers by name.

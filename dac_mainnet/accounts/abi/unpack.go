@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
 )
 
 // reads the integer based on its kind

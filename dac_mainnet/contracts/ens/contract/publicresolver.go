@@ -7,12 +7,12 @@ import (
 	"math/big"
 	"strings"
 
-	ethereum "github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
+	ethereum "github.com/davinciproject/davinci_coin/dac_mainnet"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/accounts/abi"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/accounts/abi/bind"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/event"
 )
 
 // PublicResolverABI is the input ABI used to generate the binding from.

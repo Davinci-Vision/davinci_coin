@@ -19,10 +19,10 @@ package metrics
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	gethmetrics "github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/metrics/influxdb"
-	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/cmd/utils"
+	gethmetrics "github.com/davinciproject/davinci_coin/dac_mainnet/metrics"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/metrics/influxdb"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

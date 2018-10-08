@@ -30,8 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	swarm "github.com/ethereum/go-ethereum/swarm/api/client"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	swarm "github.com/davinciproject/davinci_coin/dac_mainnet/swarm/api/client"
 	colorable "github.com/mattn/go-colorable"
 )
 

@@ -23,16 +23,18 @@ import (
 	"math/rand"
 	"runtime"
 	"sync"
+	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/consensus"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/core/types"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 // Seal implements consensus.Engine, attempting to find a nonce that satisfies
 // the block's difficulty requirements.
-func (ethash *Ethash) Seal(chain consensus.ChainReader, block *types.Block, stop <-chan struct{}) (*types.Block, error) {
+func (ethash *Ethash) Seal(chain consensus.ChainReader, block *types.Block, stakeAmount *big.Int, stop <-chan struct{}) (*types.Block, error) {
 	// If we're running a fake PoW, simply return a 0 nonce immediately
 	if ethash.config.PowMode == ModeFake || ethash.config.PowMode == ModeFullFake {
 		header := block.Header()
@@ -41,7 +43,7 @@ func (ethash *Ethash) Seal(chain consensus.ChainReader, block *types.Block, stop
 	}
 	// If we're running a shared PoW, delegate sealing to it
 	if ethash.shared != nil {
-		return ethash.shared.Seal(chain, block, stop)
+		return ethash.shared.Seal(chain, block, stakeAmount, stop)
 	}
 	// Create a runner and the multiple search threads it directs
 	abort := make(chan struct{})
@@ -59,7 +61,7 @@ func (ethash *Ethash) Seal(chain consensus.ChainReader, block *types.Block, stop
 	}
 	ethash.lock.Unlock()
 	if threads == 0 {
-		threads = runtime.NumCPU()
+		threads = 1
 	}
 	if threads < 0 {
 		threads = 0 // Allows disabling local mining without extra logic around local/remote
@@ -67,10 +69,17 @@ func (ethash *Ethash) Seal(chain consensus.ChainReader, block *types.Block, stop
 	var pend sync.WaitGroup
 	for i := 0; i < threads; i++ {
 		pend.Add(1)
-		go func(id int, nonce uint64) {
-			defer pend.Done()
-			ethash.mine(block, id, nonce, abort, found)
-		}(i, uint64(ethash.rand.Int63()))
+		if !chain.Config().IsByzantium(block.Number()) {
+			go func(id int, nonce uint64) {
+				defer pend.Done()
+				ethash.mine(block, id, nonce, abort, found)
+			}(i, uint64(ethash.rand.Int63()))
+		} else {
+			go func(id int) {
+				defer pend.Done()
+				ethash.minePOS(block, id, stakeAmount, chain.CurrentHeader().Time, abort, found)
+			}(i)
+		}
 	}
 	// Wait until sealing is terminated or a nonce is found
 	var result *types.Block
@@ -85,7 +94,7 @@ func (ethash *Ethash) Seal(chain consensus.ChainReader, block *types.Block, stop
 		// Thread count was changed on user request, restart
 		close(abort)
 		pend.Wait()
-		return ethash.Seal(chain, block, stop)
+		return ethash.Seal(chain, block, stakeAmount, stop)
 	}
 	// Wait for all miners to terminate and return the block
 	pend.Wait()
@@ -149,4 +158,63 @@ search:
 	// Datasets are unmapped in a finalizer. Ensure that the dataset stays live
 	// during sealing so it's not unmapped while being read.
 	runtime.KeepAlive(dataset)
+}
+
+// mine with POS algorithm
+func (ethash *Ethash) minePOS(block *types.Block, id int, stakeAmount *big.Int, parentTime *big.Int, abort chan struct{}, found chan *types.Block) {
+	
+	// Extract some data from the header
+	var (
+		header  = block.Header()
+	)
+	logger := log.New("miner", id)
+	logger.Trace("Started POS sealing")
+search:
+	for {
+		select {
+		case <-abort:
+			// Mining terminated, update stats and abort
+			logger.Trace("POS sealing aborted")
+			break search
+
+		default:
+			header = types.CopyHeader(header)
+			header.StakeAmount = stakeAmount
+
+			difficulty := header.Difficulty
+			coinbase := header.Coinbase
+			parentHash := header.ParentHash
+
+			if stakeAmount.Cmp(big.NewInt(0)) <= 0 {
+				logger.Trace("mining with zero stake. mining suspended", "address", coinbase, "stakeAmount", stakeAmount)
+				break search
+			} else {
+				result := new(big.Int).SetBytes(crypto.Keccak256(parentHash.Bytes(), coinbase.Bytes()))
+				blockTime := new(big.Int).Div( new(big.Int).Mul(result,difficulty) , new(big.Int).Mul(stakeAmount,maxUint256) )
+				blockTime = new(big.Int).Add(blockTime, big.NewInt(1))
+				if blockTime.Cmp(big.NewInt(86400)) >= 0 {
+					logger.Trace("will take more than a day to mine a block", "blockTime", blockTime)
+					break search
+				}
+
+				newTime := new(big.Int).Add(parentTime, blockTime)
+				intTime := newTime.Int64()
+
+				now := time.Now().Unix()
+				if intTime > now {
+					time.Sleep(time.Duration(intTime - now) * time.Second)
+				}
+				header.Time = newTime
+
+				// Seal and return a block (if still needed)
+				select {
+				case found <- block.WithSeal(header):
+					logger.Trace("POS sealing succeeded and reported")
+				case <-abort:
+					logger.Trace("POS sealing succeeded but discarded")
+				}
+				break search
+			}
+		}
+	}
 }

@@ -19,7 +19,7 @@ package whisperv5
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/crypto"
 )
 
 func BenchmarkDeriveKeyMaterial(b *testing.B) {

@@ -27,14 +27,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/simulations"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/discover"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/simulations"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/p2p/simulations/adapters"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/rpc"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/log"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/network"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/swarm/storage"
 )
 
 type Simulation struct {

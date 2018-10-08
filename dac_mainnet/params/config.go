@@ -20,13 +20,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/davinciproject/davinci_coin/dac_mainnet/common"
 )
 
 // Genesis hashes to enforce below configs on.
 var (
 	MainnetGenesisHash = common.HexToHash("0x6e6614e400cf51388dd9859a4d5d8c043624a0e7ec5640cb71b463f8b2074e1a")
 	TestnetGenesisHash = common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d")
+	RinkebyGenesisHash = common.HexToHash("0x4f5c73a1cabb0146f2006408f68f92a5a6438aa795e85c3ee45e6369e85368be")
 )
 
 var (
@@ -40,7 +41,7 @@ var (
 		EIP150Hash:          common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		EIP155Block:         big.NewInt(3),
 		EIP158Block:         big.NewInt(3),
-		ByzantiumBlock:      big.NewInt(4),
+		ByzantiumBlock:      big.NewInt(100),
 		ConstantinopleBlock: nil,
 		Ethash:              new(EthashConfig),
 	}
