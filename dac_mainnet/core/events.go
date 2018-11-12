@@ -38,6 +38,9 @@ type NewMinedBlockEvent struct{ Block *types.Block }
 // RemovedLogsEvent is posted when a reorg happens
 type RemovedLogsEvent struct{ Logs []*types.Log }
 
+// RequestCreatingWelletEvent is posted when a creating wallet happens
+type RequestCreatingWalletEvent struct{ Logs []*types.Log }
+
 type ChainEvent struct {
 	Block *types.Block
 	Hash  common.Hash
