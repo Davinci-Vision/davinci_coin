@@ -41,6 +41,9 @@ type RemovedLogsEvent struct{ Logs []*types.Log }
 // RequestCreatingWelletEvent is posted when a creating wallet happens
 type RequestCreatingWalletEvent struct{ Logs []*types.Log }
 
+// NeedCreatingSubchainEvent is posted when a chain has been needed for speed.
+type NeedCreatingSubchainEvent struct{ Logs []*types.Log }
+
 type ChainEvent struct {
 	Block *types.Block
 	Hash  common.Hash
